@@ -1,5 +1,5 @@
-import About from "./Pages/About";
 import Home from "./Pages/Home";
+import Products from "./Pages/Products";
 
 export const routes = [
     {
@@ -10,18 +10,8 @@ export const routes = [
     },
     {
         id: 2,
-        name: 'About',
-        url: '/about',
-        component: <About />
+        name: 'Products',
+        url: '/products',
+        component: <Products />
     },
-    // {
-    //     id: 3,
-    //     name: 'Gallery',
-    //     url: '/gallery'
-    // },
-    // {
-    //     id: 4,
-    //     name: 'Contact',
-    //     url: '/contact'
-    // },
 ]

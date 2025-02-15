@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Logo from '../../Assets/Images/download.svg'
 import './style.scss'
 import { SocialMediaComponent } from '../CommonHelper/helperFunction'
@@ -10,6 +10,19 @@ const Header = () => {
     const [ismenuOpen, setIsMenuOpen] = useState(false)
     const isMobile = !(window.innerWidth > 768)
     const navigate = useNavigate();
+    const [visible, setVisible] = useState(false)
+
+    useEffect(()=>{
+        const handleScroll = () => {
+            setVisible(window.scrollY > 50);
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () =>{
+            window.removeEventListener('scroll', handleScroll);
+        }
+    },[])
 
     const NavigationDesign = () => {
         return(
@@ -30,14 +43,13 @@ const Header = () => {
     }
 
     const handleActiveMenu = (url,componentUrl) => {
-       console.log(url)
        if(url === componentUrl){
         return 'active'
        }
     }
 
     return (
-        <div className={`header`}>
+        <div className={`header ${visible ? 'visible' : ''}`}>
             <div className="header-wrapper">
                 <div className="logo-wrapper">
                     <img src={Logo} alt='logo' />

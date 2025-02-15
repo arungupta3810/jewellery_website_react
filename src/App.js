@@ -1,7 +1,8 @@
 import './App.scss'
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { routes } from "./Components/routes";
-import Header from './Components/Header';
+import Home from './Components/Pages/Home';
+import Layout from './Components/Pages/Layout';
 
 function App() {
   return (
@@ -9,9 +10,7 @@ function App() {
       <BrowserRouter>
       <Routes>
       {routes?.map((route, index) => (
-        <Route element={<Header />}>
-            <Route key={index} path={route.url} element={route.component} />
-        </Route>
+            <Route key={index} path={route.url} element={<Layout><Home /></Layout>} />
           ))}
       </Routes>
       </BrowserRouter>

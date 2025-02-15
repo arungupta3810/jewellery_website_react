@@ -1,11 +1,18 @@
 .header {
     background-color: #DDD6D0;
-    padding: 1rem 0;
-    width: 100%;
+    z-index: 100000;
+    opacity: 0;
+    background: #fff;
+    height: 60px;
+    padding: 8px 0;
+    transition: all .18s ease-in-out;
     position: fixed;
-    z-index: 100;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    left: 0;
+    right: 0;
+    transform: translateY(-100%);
+    box-shadow: 0 2px 6px #00000012;
     .header-wrapper {
+        background-color: #fff;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -58,4 +65,8 @@
 
         }
     }
+}
+.visible{
+    opacity: 1;
+    transform: translate(0, 0);
 }

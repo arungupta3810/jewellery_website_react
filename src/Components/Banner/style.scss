@@ -1,8 +1,43 @@
 .banner{
-.banner-slider{
-    // background: #364d79;
-h3{
-    height: 90dvh;
-}
-}
+    height: 100dvh;
+    background: black;
+    color: white;
+    .banner-slider{
+        padding: 5rem;
+        @media screen and (max-width: 767px) {
+            padding: 4rem 0;
+        }
+        .carousel-row{
+            display: flex!important;
+            align-items: center;
+            gap: 1rem;
+            @media screen and (max-width: 767px) {
+                flex-direction: column;
+            }
+            .slider-col-1{
+                width: 50%;
+                @media screen and (max-width: 767px) {
+                    width: 85%;
+                }
+            img{
+                width: 100%;
+            }
+        }
+        .slider-col-2{
+            width: 50%;
+            @media screen and (max-width: 767px) {
+                width: 85%;
+            }
+            p{
+                color: white;
+                font-size: 14px;
+            }
+            .btn{
+                @media screen and (max-width:767px) {
+                    text-align: center;   
+                }
+            }
+        }
+    }
+    }
 }
