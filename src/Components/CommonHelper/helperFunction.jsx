@@ -2,6 +2,7 @@ import Facebook from '../../Assets/Images/fb.svg'
 import Whatsapp from '../../Assets/Images/whatsapp.svg'
 import Instagram from '../../Assets/Images/instagram.svg'
 import Youtube from '../../Assets/Images/youtube.svg'
+import { ArrowUpOutlined } from '@ant-design/icons'
 
 export const SocialMediaComponent = ({header}) => {
     const phoneNumber = "8652864081"
@@ -41,4 +42,20 @@ export const SocialMediaComponent = ({header}) => {
     <b><span>Follow us here</span></b>
     </>}
     </>)
+}
+
+export const GotoTopArrow = ({scrollPercent,onClick}) => {
+    return(
+        <div className="arrow" onClick={onClick}>
+            {/* <Progress type="circle" percent={scrollPercent} size={'small'}/> */}
+            <ArrowUpOutlined />
+        </div>
+    )
+}
+
+export const ScrollToTop = (behavior) => {
+    window.scrollTo({
+        top: 0,
+        behavior: behavior
+      });
 }

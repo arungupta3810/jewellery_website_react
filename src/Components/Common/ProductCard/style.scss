@@ -1,0 +1,28 @@
+.productcard{
+    padding-bottom: 2rem;
+    .img-wrapper{
+        overflow: hidden;
+        img{
+            width: 100%;
+            border-radius: 10px;
+        }
+    }
+    .content{
+        padding: 10px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+        .price{
+            font-size: 16px;
+            font-weight: 600;
+        }
+    }
+    .checkout{
+        margin-top: 0.5rem;
+        width: 100%;
+        background: #ffd812;
+    }
+    .checkout:hover{
+        background: #ffd812!important;
+    }
+}

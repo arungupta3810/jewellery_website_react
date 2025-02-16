@@ -1,10 +1,18 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import Section from '../../Components/Common/Section'
+import CustomTab from '../../Components/CustomTab'
+import { ScrollToTop } from '../../Components/CommonHelper/helperFunction'
+import ProductCommonTab from '../../Components/ProductCommonTab'
 
 const Products = () => {
+  useEffect(()=>{
+    ScrollToTop('instant')
+  },[])
   return (
-    <div>
-      
-      <div>About<br/><br/><br/><br/><br/><br/><br/><br/></div><div>About</div><div>About</div><div>About</div><div>About</div><div>About</div><div>About</div><div>About</div><div>About</div>About</div>
+    <Section className={'products'}>
+      <h1>Keep shopping for Jwellery</h1>
+      <ProductCommonTab />
+    </Section>
   )
 }
 

@@ -2,7 +2,6 @@ import './App.scss'
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { routes } from "./Components/routes";
 import Layout from './Pages/Layout';
-import Home from './Pages/Home';
 
 function App() {
   return (
@@ -10,7 +9,7 @@ function App() {
       <BrowserRouter>
       <Routes>
       {routes?.map((route, index) => (
-            <Route key={index} path={route.url} element={<Layout><Home /></Layout>} />
+            <Route key={index} path={route.url} element={<Layout>{route?.component}</Layout>} />
           ))}
       </Routes>
       </BrowserRouter>

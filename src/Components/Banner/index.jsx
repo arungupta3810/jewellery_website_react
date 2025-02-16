@@ -30,7 +30,7 @@ const Banner = () => {
 
   return (
     <div className="banner">
-      <Carousel  className="banner-slider" swipeToSlide arrows>
+      <Carousel autoplay className="banner-slider" swipeToSlide arrows>
         {bannerContent?.map(({ id, image, quote }) => (
          <div gutter={16} className="carousel-row" key={id}>
         

@@ -1,0 +1,27 @@
+.tab{
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    .tab-header{
+        border: 1px solid black;
+        background-color: white;
+        position: sticky;
+        top: 5rem;
+        display: flex;
+        z-index: 10000; 
+        .tabs{
+            padding: 10px;
+        }
+        .active{
+            background-color: grey;
+        }
+    }
+    .tab-body{
+        margin-top: 3rem;
+        overflow: hidden;
+        // border: 1px solid red;
+        .tab-content{
+            height: 100dvh;
+        }
+    }
+}
